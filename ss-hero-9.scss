@@ -1,0 +1,142 @@
+.ss-hero-9 {
+    overflow: hidden;
+    * {
+        padding: 0;
+        margin: 0;
+        border: none;
+        box-shadow: none;
+        outline: none;
+        min-width: unset;
+        min-height: unset;
+        max-width: unset;
+        max-height: unset;
+    }
+    .ss-inner-container {
+        position: relative;
+        .bg-wrapper {
+            overflow: hidden;
+            position: relative;
+            @media screen and (max-width: 1180px) {
+                position: absolute;
+                inset: 0;
+                height: 100%;
+                width: 100%;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: rgba($color: #000000, $alpha: 0.1);
+            }
+            img {
+                @media screen and (min-width: 750px) {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        .ss-content-area {
+            display: flex;
+            position: absolute;
+            align-items: center;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            @media screen and (max-width: 1180px) {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+            }
+            .ss-left-s {
+                flex: 0 0 43%;
+                padding: 40px 80px;
+                @media screen and (max-width: 1180px) {
+                    padding: 40px 80px;
+                }
+                @media screen and (max-width: 750px) {
+                    padding: 40px 20px;
+                }
+                .ss-caption {
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 117.7%;
+                    letter-spacing: -0.03em;
+                    color: #C5EDFF;
+                }
+                .ss-main-title {
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 54px;
+                    line-height: 117.7%;
+                    letter-spacing: -0.03em;
+                    color: #FFFFFF;
+                    margin: 20px 0;
+                    @media screen and (max-width: 750px) {
+                        font-size: 40px;
+                    }
+                }
+                .ss-pera {
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 17px;
+                    line-height: 150%;
+                    letter-spacing: -0.03em;
+                    color: #FFFFFF;
+                }
+                .ss-button-wrapper {
+                    margin: 20px 0;
+                    display: flex;
+                    gap: 20px;
+                    flex-wrap: wrap;
+                    .ss-button-primary {
+                        background: #FFFFFF;
+                        border-radius: 40px;
+                        border: 2px solid #FFFFFF;
+                        text-decoration: none;
+                        font-weight: 700;
+                        font-size: 15px;
+                        line-height: 158.7%;
+                        letter-spacing: -0.03em;
+                        color: #002772;
+                        padding: 15px 30px;
+                        display: inline-block;
+                    }
+                    .ss-button-secondary {
+                        background: transparent;
+                        border: 2px solid #FFFFFF;
+                        border-radius: 40px;
+                        text-decoration: none;
+                        font-weight: 700;
+                        font-size: 15px;
+                        line-height: 158.7%;
+                        letter-spacing: -0.03em;
+                        color: #FFFFFF;
+                        padding: 15px 30px;
+                        display: inline-block;
+                    }
+                }
+            }
+            .ss-right-s {
+                flex: 0 0 55%;
+                display: flex;
+                justify-content: flex-end;
+                svg {
+                    width: 90%;
+                    height: auto;
+                }
+                @media screen and (max-width: 1180px) {
+                    padding: 40px 80px;
+                }
+                @media screen and (max-width: 750px) {
+                    padding: 40px 20px;
+                    padding-top: 0px;
+                    svg {
+                        width: 100%; 
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,89 @@
+{{ 'ss-hero-9.css' | asset_url | stylesheet_tag }}
+<div class="ss-inner-container">
+    <div class="bg-wrapper" style="background-color: #000000;">
+        <img src="{{ 'ss-hero-9-bg.svg' | asset_url }}" alt="background">
+    </div>
+    <div class="ss-content-area">
+        <div class="ss-left-s">
+            <div class="ss-caption">
+                {{ section.settings.caption }} 
+            </div>
+            <h2 class="ss-main-title">
+                {{ section.settings.title }}
+            </h2>
+            <div class="ss-pera rte">
+                {{ section.settings.description }}
+            </div>
+            <div class="ss-button-wrapper">
+                <a href="{{ section.settings.button_link_1 }}" class="ss-button ss-button-primary">{{ section.settings.button_text_1 }}</a>
+                <a href="{{ section.settings.button_link_2 }}" class="ss-button ss-button-secondary">{{ section.settings.button_text_2 }}</a>
+            </div>
+        </div> 
+        <div class="ss-right-s">
+            {% render 'ss-hero-9-mockup', image1: section.settings.image1, image2: section.settings.image2 %}
+        </div>
+    </div>
+</div>
+{% schema %}
+{
+    "name": "SS Hero 9",
+    "class": "ss-hero-9",
+    "presets": [
+        {
+            "name":"SS Hero 9",
+        }
+    ],
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "image1",
+            "label": "Mockup 1 Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "image2",
+            "label": "Mockup 2 Image"
+        },
+        {
+            "type": "text",
+            "id": "caption",
+            "label": "Caption",
+            "default": "DESIGN SMARTER, NOT HARDER"
+        },
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Discipline will take you places motivation can't"
+        },
+        {
+            "type": "textarea",
+            "id": "description",
+            "label": "Description",
+            "default": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>"
+        },
+        {
+            "type": "text",
+            "id": "button_text_1",
+            "label": "Button Text 1",
+            "default": "Get Started"
+        },
+        {
+            "type": "text",
+            "id": "button_text_2",
+            "label": "Button Text 2",
+            "default": "Learn More"
+        },
+        {
+            "type": "url",
+            "id": "button_link_1",
+            "label": "Button Link 1"
+        },
+        {
+            "type": "url",
+            "id": "button_link_2",
+            "label": "Button Link 2"
+        }
+    ] 
+}
+{% endschema %}
